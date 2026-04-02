@@ -39,4 +39,4 @@ Features are scaled and encoded correctly
 Observations:
 Some imbalance may exist between “yes” and “no” classes
 Logistic Regression may struggle with:
-Complex non-linear re
+Complex non-linear regression.
