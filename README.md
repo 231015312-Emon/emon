@@ -4,11 +4,11 @@ This problem is formulated as a binary classification task, where the target var
 Yes (1) → Customer subscribes
 No (0) → Customer does not subscribe
 A Logistic Regression model is used because it is:
-
 Simple and efficient
 Interpretable (important in banking decisions)
 Well-suited for binary classification problems
 The model learns the relationship between customer features and the probability of subscription.
+
 Methodology-
 The dataset used is the Bank Marketing Dataset, which contains information collected from previous marketing campaigns.
 Key details:
@@ -27,9 +27,9 @@ Training set (80%)
 Testing set (20%)
 Stratified sampling is used to preserve class distribution.
 A Pipeline is used to combine preprocessing and model training into a single workflow:
-
 Step 1: Data preprocessing
 Step 2: Logistic Regression model
+
 Findings-
 The Logistic Regression model successfully predicts whether a customer is likely to subscribe to a term deposit
 It provides probability-based outputs, which are useful for decision-making in marketing strategies
