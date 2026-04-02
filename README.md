@@ -1,25 +1,43 @@
 Approach-
-The objective of this project is to develop a CNN model capable of automatically classifying chest X-ray into two categories:
-Pneumonia 
-Normal
-This is a supervised learning problem,
-where the model is trained on labeled medical images and learns to recognize patterns associated with each class.
-CNNs are particularly effective for
-image classification tasks because they can automatically extract important spatial features such as edges, textures, and shapes from images.
+The goal of this project is to develop a machine learning model that predicts whether a customer will subscribe to a term deposit based on their demographic and banking-related information.
+This problem is formulated as a binary classification task, where the target variable has two possible outcomes:
+Yes (1) → Customer subscribes
+No (0) → Customer does not subscribe
+A Logistic Regression model is used because it is:
+
+Simple and efficient
+Interpretable (important in banking decisions)
+Well-suited for binary classification problems
+The model learns the relationship between customer features and the probability of subscription.
 Methodology-
-The dataset consists of 5,863 chest X-ray images (JPEG format) categorized into two classes:
-Pneumonia
-Normal
-The dataset is organized into three subsets:
-Training set – used to train the model
-Validation set – used to tune and validate performance
-Test set – used for final evaluation
-These images are anterior-posterior chest X-rays collected from pediatric patients aged 1–5 years as part of routine clinical care.
+The dataset used is the Bank Marketing Dataset, which contains information collected from previous marketing campaigns.
+Key details:
+17 input features (customer and campaign information)
+1 target variable (y: yes/no)
+Data includes:
+Demographics (age, job, marital status, education)
+Financial details (balance, loans)
+Campaign-related features (contact type, duration, previous outcomes)
+Features are divided into:
+Numerical features → scaled using StandardScaler
+Categorical features → encoded using One-Hot Encoding
+A ColumnTransformer is used to apply preprocessing steps efficiently.
+The dataset is split into:
+Training set (80%)
+Testing set (20%)
+Stratified sampling is used to preserve class distribution.
+A Pipeline is used to combine preprocessing and model training into a single workflow:
+
+Step 1: Data preprocessing
+Step 2: Logistic Regression model
 Findings-
-The CNN model successfully learns to differentiate between Pneumonia and Normal chest X-rays
-The model achieves good accuracy on both training and validation datasets
-Some degree of overfitting may be observed due to the limited size and imbalance of medical data
-Model performance can be further improved by:
-Using Transfer Learning (e.g., MobileNet, ResNet)
-Applying class balancing techniques
-Increasing dataset size
+The Logistic Regression model successfully predicts whether a customer is likely to subscribe to a term deposit
+It provides probability-based outputs, which are useful for decision-making in marketing strategies
+The model performs well when:
+Data is properly preprocessed
+Features are scaled and encoded correctly
+Observations:
+Some imbalance may exist between “yes” and “no” classes
+Logistic Regression may struggle with:
+Complex non-linear relationships
+Highly imbalanced datasets
