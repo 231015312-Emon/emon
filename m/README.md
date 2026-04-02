@@ -6,6 +6,7 @@ This is a supervised learning problem,
 where the model is trained on labeled medical images and learns to recognize patterns associated with each class.
 CNNs are particularly effective for
 image classification tasks because they can automatically extract important spatial features such as edges, textures, and shapes from images.
+
 Methodology-
 The dataset consists of 5,863 chest X-ray images (JPEG format) categorized into two classes:
 Pneumonia
@@ -15,6 +16,7 @@ Training set – used to train the model
 Validation set – used to tune and validate performance
 Test set – used for final evaluation
 These images are anterior-posterior chest X-rays collected from pediatric patients aged 1–5 years as part of routine clinical care.
+
 Findings-
 The CNN model successfully learns to differentiate between Pneumonia and Normal chest X-rays
 The model achieves good accuracy on both training and validation datasets
